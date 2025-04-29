@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechGear - สินค้า</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>TechGear</h1>
+            </div>
+            <nav>
+                <ul class="main-menu" id="main-menu">
+                    <li><a href="index.html" class="active">หน้าหลัก</a></li>
+                    <li><a href="products.html">สินค้า</a></li>
+                    <li><a href="service.html">บริการ</a></li>
+                    <li><a href="contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="search.html" class="search-icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="account.html" class="user-icon"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Products Banner -->
+    <section class="products-banner">
+        <div class="container">
+            <h1>สินค้าทั้งหมด</h1>
+            <p>ค้นพบอุปกรณ์คอมพิวเตอร์คุณภาพเยี่ยมที่ตอบโจทย์ทุกความต้องการของคุณ</p>
+        </div>
+    </section>
+
+    <!-- Filter and Products -->
+    <section class="products-section">
+        <div class="container">
+          <div class="products-grid-container">
+            
+            <!-- Sidebar Filters -->
+            <div class="sidebar-filters">
+              <div class="sidebar-header">
+                <h3>หมวดหมู่</h3>
+                <div class="sidebar-toggle" id="sidebarToggle">
+                  <i class="fas fa-bars"></i> <!-- ไอคอน 3 ขีด -->
+                </div>
+              </div>
+      
+              <ul class="category-filter" id="categoryFilter">
+                <li><a href="#" class="active">ทั้งหมด</a></li>
+                <li><a href="#">CPU</a></li>
+                <li><a href="#">Mainboard</a></li>
+                <li><a href="#">VGA Card</a></li>
+                <li><a href="#">RAM</a></li>
+                <li><a href="#">Storage</a></li>
+                <li><a href="#">Case</a></li>
+                <li><a href="#">Power Supply</a></li>
+                <li><a href="#">Cooling</a></li>
+                <li><a href="#">Monitor</a></li>
+                <li><a href="#">Keyboard</a></li>
+                <li><a href="#">Mouse</a></li>
+                <li><a href="#">Headset</a></li>
+              </ul>
+      
+            </div>
+            
+            <!-- Product Grid ตรงนี้จะเป็นสินค้า -->
+            <div class="products-grid">
+              <!-- Card สินค้า -->
+            </div>
+      
+          </div>
+        </div>
+      </section>
+                    
+                    <div class="filter-block">
+                        <h3>ยี่ห้อ</h3>
+                        <div class="checkbox-filter">
+                            <label><input type="checkbox"> Intel</label>
+                            <label><input type="checkbox"> AMD</label>
+                            <label><input type="checkbox"> NVIDIA</label>
+                            <label><input type="checkbox"> ASUS</label>
+                            <label><input type="checkbox"> MSI</label>
+                            <label><input type="checkbox"> GIGABYTE</label>
+                            <label><input type="checkbox"> Kingston</label>
+                            <label><input type="checkbox"> Corsair</label>
+                            <label><input type="checkbox"> Western Digital</label>
+                            <label><input type="checkbox"> Samsung</label>
+                        </div>
+                        <a href="#" class="show-more">แสดงเพิ่มเติม</a>
+                    </div>
+                    
+                    <div class="filter-block">
+                        <h3>ช่วงราคา</h3>
+                        <div class="price-range">
+                            <div class="price-slider">
+                                <div class="price-slider-bar"></div>
+                            </div>
+                            <div class="price-inputs">
+                                <input type="number" placeholder="ต่ำสุด" class="min-price">
+                                <span>-</span>
+                                <input type="number" placeholder="สูงสุด" class="max-price">
+                            </div>
+                            <button class="btn secondary-btn filter-price-btn">กรองราคา</button>
+                        </div>
+                    </div>
+                    
+                    <div class="filter-block">
+                        <h3>คุณสมบัติพิเศษ</h3>
+                        <div class="checkbox-filter">
+                            <label><input type="checkbox"> ลดราคา</label>
+                            <label><input type="checkbox"> สินค้าใหม่</label>
+                            <label><input type="checkbox"> มีของในสต็อก</label>
+                            <label><input type="checkbox"> ของแถม</label>
+                            <label><input type="checkbox"> รับประกัน 3 ปี</label>
+                        </div>
+                    </div>
+                    
+                    <button class="btn primary-btn apply-filter-btn">นำไปใช้ตัวกรอง</button>
+                    <button class="btn view-btn reset-filter-btn">ล้างตัวกรอง</button>
+                </div>
+
+                <!-- Products Grid -->
+                <div class="products-container">
+                    <!-- Top Bar -->
+                    <div class="products-topbar">
+                        <div class="results-count">
+                            <p>พบสินค้า <strong>48</strong> รายการ</p>
+                        </div>
+                        <div class="sort-options">
+                            <label for="sort-by">เรียงตาม:</label>
+                            <select id="sort-by">
+                                <option value="popularity">ความนิยม</option>
+                                <option value="newest">สินค้าใหม่ล่าสุด</option>
+                                <option value="price-low">ราคาต่ำ-สูง</option>
+                                <option value="price-high">ราคาสูง-ต่ำ</option>
+                                <option value="rating">คะแนนสูงสุด</option>
+                            </select>
+                        </div>
+                        <div class="view-options">
+                            <button class="grid-view active"><i class="fas fa-th"></i></button>
+                            <button class="list-view"><i class="fas fa-list"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Products Grid -->
+                    <div class="products-grid">
+                        <!-- Product 1 -->
+                        <div class="product-card">
+                            <div class="product-badge new">ใหม่</div>
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t6.png" alt="CPU Intel Core i9">
+                            <div class="product-info">
+                                <h3>CPU Intel Core i9</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(38)</span>
+                                </div>
+                                <p class="product-price">18,900 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=1" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 2 -->
+                        <div class="product-card">
+                            <div class="product-badge sale">ลดราคา</div>
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t7.png" alt="VGA NVIDIA RTX 4080">
+                            <div class="product-info">
+                                <h3>VGA GALAX GEFORC</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(52)</span>
+                                </div>
+                                <p class="product-price"><span class="original-price">45,900 บาท</span> 42,900 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=2" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 3 -->
+                        <div class="product-card">
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t8.png" alt="RAM DDR5">
+                            <div class="product-info">
+                                <h3>Corsair DDR5 32GB</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(27)</span>
+                                </div>
+                                <p class="product-price">6,900 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=3" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 4 -->
+                        <div class="product-card">
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t9.png" alt="SSD 2TB">
+                            <div class="product-info">
+                                <h3>SSamsung 2TB 990 PRO</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(45)</span>
+                                </div>
+                                <p class="product-price">8,900 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=4" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 5 -->
+                        <div class="product-card">
+                            <div class="product-badge sale">ลดราคา</div>
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t10.png" alt="Monitor Gaming">
+                            <div class="product-info">
+                                <h3>ASUS TUF GAMING</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(31)</span>
+                                </div>
+                                <p class="product-price"><span class="original-price">12,900 บาท</span> 10,900 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=5" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 6 -->
+                        <div class="product-card">
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t11.png" alt="Keyboard Mechanical">
+                            <div class="product-info">
+                                <h3>HyperX Gaming Keyboard</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(24)</span>
+                                </div>
+                                <p class="product-price">3,590 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=6" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 7 -->
+                        <div class="product-card">
+                            <div class="product-badge new">ใหม่</div>
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t12.png" alt="AMD Ryzen 9">
+                            <div class="product-info">
+                                <h3>AMD Ryzen 9 </h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(41)</span>
+                                </div>
+                                <p class="product-price">19,900 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=7" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 8 -->
+                        <div class="product-card">
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t13.png" alt="Cooling System">
+                            <div class="product-info">
+                                <h3>Asus CPU Cooler ROG</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(33)</span>
+                                </div>
+                                <p class="product-price">4,590 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=8" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 9 -->
+                        <div class="product-card">
+                            <div class="product-badge sale">ลดราคา</div>
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t14.png" alt="Gaming Mouse">
+                            <div class="product-info">
+                                <h3>Razer Basilisk V3</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(29)</span>
+                                </div>
+                                <p class="product-price"><span class="original-price">2,990 บาท</span> 2,490 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=9" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 10 -->
+                        <div class="product-card">
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t15.png" alt="Power Supply">
+                            <div class="product-info">
+                                <h3>Thermaltake Power Supply</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <span class="rating-count">(36)</span>
+                                </div>
+                                <p class="product-price">3,990 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=10" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 11 -->
+                        <div class="product-card">
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t16.png" alt="Gaming Headset">
+                            <div class="product-info">
+                                <h3>Razer Gaming Headset</h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <span class="rating-count">(22)</span>
+                                </div>
+                                <p class="product-price">2,590 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=11" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Product 12 -->
+                        <div class="product-card">
+                            <div class="product-badge new">ใหม่</div>
+                            <div class="product-favorite"><i class="far fa-heart"></i></div>
+                            <div class="product-compare"><i class="fas fa-exchange-alt"></i></div>
+                            <img src="pic/t17.png" alt="PC Case">
+                            <div class="product-info">
+                                <h3>Corsair 3500X Mid-Tower </h3>
+                                <div class="product-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                    <span class="rating-count">(19)</span>
+                                </div>
+                                <p class="product-price">3,290 บาท</p>
+                                <div class="product-actions">
+                                    <a href="product-detail.html?id=12" class="btn view-btn">ดูรายละเอียด</a>
+                                    <button class="btn add-to-cart-btn">เพิ่มลงตะกร้า</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <a href="#" class="page-prev"><i class="fas fa-chevron-left"></i></a>
+                        <a href="#" class="page-number active">1</a>
+                        <a href="#" class="page-number">2</a>
+                        <a href="#" class="page-number">3</a>
+                        <a href="#" class="page-number">4</a>
+                        <span class="page-dots">...</span>
+                        <a href="#" class="page-number">8</a>
+                        <a href="#" class="page-next"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+  </html>
+  
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>ติดต่อเรา</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 ถนนเทคโนโลยี แขวงดิจิตอล เขตคอมพิวเตอร์ กรุงเทพฯ 10XXX</p>
+                        <p><i class="fas fa-phone"></i> 02-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> info@techgear.co.th</p>
+                        <p><i class="fas fa-clock"></i> เปิดทำการ: จันทร์-เสาร์ 10:00-19:00 น.</p>
+                    </address>
+                </div>
+            </div>
+    </footer>

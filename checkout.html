@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ชำระเงิน - TechGear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>TechGear</h1>
+            </div>
+            <nav>
+                <ul class="main-menu" id="main-menu">
+                    <li><a href="index.html" class="active">หน้าหลัก</a></li>
+                    <li><a href="products.html">สินค้า</a></li>
+                    <li><a href="service.html">บริการ</a></li>
+                    <li><a href="contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="search.html" class="search-icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="account.html" class="user-icon"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Checkout Page -->
+    <section class="checkout-page">
+        <div class="container">
+            <h2 class="section-title">ชำระเงิน</h2>
+            
+            <div class="checkout-grid">
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>รายการสั่งซื้อ</h3>
+                    <table class="order-table">
+                        <thead>
+                            <tr>
+                                <th>สินค้า</th>
+                                <th>จำนวน</th>
+                                <th>ราคา</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CPU Intel Core i9</td>
+                                <td>1</td>
+                                <td>18,900 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>VGA GALAX GEFORCE</td>
+                                <td>1</td>
+                                <td>42,900 บาท</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="order-total">
+                        <p>รวม: <strong>61,800 บาท</strong></p>
+                    </div>
+                </div>
+
+                <!-- Payment Form -->
+                <div class="payment-form">
+                    <h2>ข้อมูลชำระเงิน</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">ชื่อผู้ชำระเงิน</label>
+                            <input type="text" id="name" name="name" placeholder="กรอกชื่อผู้ชำระเงิน">
+                        </div>
+                        
+                        <!-- ตัวเลือกการชำระเงิน -->
+                        <div class="form-group">
+                            <label for="payment-method">เลือกวิธีการชำระเงิน</label>
+                            <select id="payment-method" name="payment-method">
+                                <option value="credit-card">บัตรเครดิต/เดบิต</option>
+                                <option value="bank-transfer">โอนผ่านธนาคาร</option>
+                                <option value="paypal">PayPal</option>
+                                <option value="cash-on-delivery">ชำระเงินปลายทาง</option>
+                            </select>
+                        </div>
+                
+                        <!-- ข้อมูลบัตรเครดิต -->
+                        <div class="form-group" id="card-details" style="display:none;">
+                            <label for="card-number">หมายเลขบัตรเครดิต</label>
+                            <input type="text" id="card-number" name="card-number" placeholder="กรอกหมายเลขบัตรเครดิต">
+                        </div>
+                        <div class="form-group" id="expiry-details" style="display:none;">
+                            <label for="expiry">วันหมดอายุ</label>
+                            <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
+                        </div>
+                        <div class="form-group" id="cvv-details" style="display:none;">
+                            <label for="cvv">CVV</label>
+                            <input type="text" id="cvv" name="cvv" placeholder="กรอก CVV">
+                        </div>
+                
+                        <!-- ข้อมูลโอนผ่านธนาคาร -->
+                        <div class="form-group" id="bank-details" style="display:none;">
+                            <label for="bank-account">หมายเลขบัญชีธนาคาร</label>
+                            <input type="text" id="bank-account" name="bank-account" placeholder="กรอกหมายเลขบัญชีธนาคาร">
+                        </div>
+                
+                        <button type="submit" class="submit-btn">ยืนยันการชำระเงิน</button>
+                    </form>
+                </div>                              
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>ติดต่อเรา</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 ถนนเทคโนโลยี แขวงดิจิตอล เขตคอมพิวเตอร์ กรุงเทพฯ 10XXX</p>
+                        <p><i class="fas fa-phone"></i> 02-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> info@techgear.co.th</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

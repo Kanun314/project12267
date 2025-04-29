@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>รถเข็น - TechGear</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>TechGear</h1>
+            </div>
+            <nav>
+                <ul class="main-menu" id="main-menu">
+                    <li><a href="index.html" class="active">หน้าหลัก</a></li>
+                    <li><a href="products.html">สินค้า</a></li>
+                    <li><a href="service.html">บริการ</a></li>
+                    <li><a href="contact.html">ติดต่อเรา</a></li>
+                </ul>
+            </nav>
+            <div class="user-actions">
+                <a href="search.html" class="search-icon"><i class="fas fa-search"></i></a>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i><span class="cart-count">0</span></a>
+                <a href="account.html" class="user-icon"><i class="fas fa-user"></i></a>
+            </div>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+        <div class="container">
+            <h2>รถเข็นของคุณ</h2>
+            <div class="cart-items">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th>สินค้า</th>
+                            <th>จำนวน</th>
+                            <th>ราคา</th>
+                            <th>รวม</th>
+                            <th>ลบ</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="cart-item">
+                                    <img src="pic/t6.png" alt="Product 1">
+                                    <p>CPU Intel Core i9</p>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="number" value="1" min="1">
+                            </td>
+                            <td>18,900 บาท</td>
+                            <td>18,900 บาท</td>
+                            <td><button class="remove-btn"><i class="fas fa-trash"></i></button></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="cart-item">
+                                    <img src="pic/t7.png" alt="Product 2">
+                                    <p>VGA GALAX GEFORCE</p>
+                                </div>
+                            </td>
+                            <td>
+                                <input type="number" value="1" min="1">
+                            </td>
+                            <td>42,900 บาท</td>
+                            <td>42,900 บาท</td>
+                            <td><button class="remove-btn"><i class="fas fa-trash"></i></button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Total and Checkout Button -->
+            <div class="cart-summary">
+                <div class="total">
+                    <p><strong>รวมทั้งหมด:</strong> 61,800 บาท</p>
+                </div>
+                <div class="checkout-buttons">
+                    <a href="checkout.html" class="btn primary-btn">ดำเนินการต่อไปยังการชำระเงิน</a>
+                    <a href="products.html" class="btn secondary-btn">เลือกซื้อสินค้าเพิ่ม</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-line"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>ติดต่อเรา</h3>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> 123 ถนนเทคโนโลยี แขวงดิจิตอล เขตคอมพิวเตอร์ กรุงเทพฯ 10XXX</p>
+                        <p><i class="fas fa-phone"></i> 02-XXX-XXXX</p>
+                        <p><i class="fas fa-envelope"></i> info@techgear.co.th</p>
+                        <p><i class="fas fa-clock"></i> เปิดทำการ: จันทร์-เสาร์ 10:00-19:00 น.</p>
+                    </address>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
